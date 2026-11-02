@@ -135,7 +135,18 @@ export function Footer() {
           <p>
             © {copyrightYear} {siteConfig.name}. All rights reserved.
           </p>
-          <p>{siteConfig.location}</p>
+          <p>
+            Developed by{" "}
+            <a
+              href="https://ahamedwebstudio.lk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/85 underline decoration-white/30 underline-offset-4 transition-colors hover:text-aqua hover:decoration-aqua"
+            >
+              Ahamed Web Studio
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </p>
         </Container>
       </div>
     </footer>
