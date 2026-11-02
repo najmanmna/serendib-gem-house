@@ -17,7 +17,7 @@ export function Header() {
   return (
     <HeaderShell>
       <Container className="flex h-20 items-center justify-between gap-6 transition-[height] duration-300 ease-out group-data-[scrolled=true]/header:h-16 lg:grid lg:h-24 lg:grid-cols-[1fr_auto_1fr] lg:group-data-[scrolled=true]/header:h-[4.5rem]">
-        <Link href="/" aria-label="Serendib Gem House, home" className="shrink-0 justify-self-start rounded-brand">
+        <Link href="/" aria-label="Serendib Crown Gems, home" className="shrink-0 justify-self-start rounded-brand">
           <Logo compactOnScroll />
         </Link>
 

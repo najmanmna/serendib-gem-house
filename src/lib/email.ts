@@ -4,7 +4,7 @@
  *
  * Required environment variables:
  *   RESEND_API_KEY            Resend API key
- *   EMAIL_FROM                Verified sender, e.g. "Serendib Gem House <hello@yourdomain>"
+ *   EMAIL_FROM                Verified sender, e.g. "Serendib Crown Gems <hello@yourdomain>"
  *   ADMIN_NOTIFICATION_EMAIL  Where new enquiries are sent
  */
 

@@ -1,4 +1,4 @@
-# Serendib Gem House — Sanity Content Model (Revision)
+# Serendib Crown Gems — Sanity Content Model (Revision)
 
 **Document:** `09-sanity-content-model.md`  
 **Version:** 1.1
@@ -290,7 +290,7 @@ Store snapshots where historical information needs to remain unchanged, such as 
 ## 12. Final Sanity Studio Navigation
 
 ```text
-Serendib Gem House
+Serendib Crown Gems
 │
 ├── Products
 ├── Categories

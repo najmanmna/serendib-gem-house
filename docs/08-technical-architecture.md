@@ -1,4 +1,4 @@
-# Serendib Gem House — Technical Architecture
+# Serendib Crown Gems — Technical Architecture
 
 **Document:** `08-technical-architecture.md`  
 **Status:** Revised recommended architecture  
@@ -8,7 +8,7 @@
 
 ## 1. Architecture Overview
 
-Serendib Gem House will use a custom Next.js frontend connected directly to Sanity as its content management system and content backend.
+Serendib Crown Gems will use a custom Next.js frontend connected directly to Sanity as its content management system and content backend.
 
 The application will be hosted on Cloudflare, with GitHub Actions handling automated deployment.
 
@@ -633,6 +633,15 @@ Do not select an adapter solely because it produces a successful build. Test:
 - Draft Mode if enabled.
 
 Choose the adapter that provides the required feature compatibility and a reliable production deployment.
+
+### Selected adapter
+
+The site uses **OpenNext** (`@opennextjs/cloudflare`), which supports Next.js 16, Partial Prerendering and `"use cache"`. vinext was considered but is still in beta.
+
+- Configuration: `wrangler.jsonc` and `open-next.config.ts`.
+- Prerendered pages use the static-assets incremental cache, suited to content that changes only on deploy. Switch to the R2 incremental cache once content comes from Sanity and must update without a redeploy.
+- `next/image` optimisation uses the Cloudflare Images binding (`IMAGES`).
+- Deployment runs from GitHub Actions (`.github/workflows/deploy.yml`).
 
 ### Cloudflare services
 

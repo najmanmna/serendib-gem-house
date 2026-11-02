@@ -1,0 +1,57 @@
+name: Build and deploy
+
+# Pull requests: lint, type check and a full Cloudflare build (no deploy).
+# Pushes to main (and manual runs on main): the same checks, then deploy to Cloudflare Workers.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+# Never run two deployments at once; superseded pull request runs are cancelled.
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Public site URL for canonical links and social previews, e.g. https://serendibcrowngems.com.
+      # Set it under Settings → Secrets and variables → Actions → Variables.
+      NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Warn if the site URL is not set
+        if: env.NEXT_PUBLIC_SITE_URL == ''
+        run: echo "::warning::NEXT_PUBLIC_SITE_URL is not set, so canonical and social links will point to localhost."
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npx next typegen && npx tsc --noEmit
+
+      - name: Build for Cloudflare Workers
+        run: npx opennextjs-cloudflare build
+
+      # --keep-vars keeps variables set in the Cloudflare dashboard. Secrets
+      # (such as RESEND_API_KEY) are never removed by a deploy.
+      - name: Deploy to Cloudflare Workers
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: npx opennextjs-cloudflare deploy -- --keep-vars
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

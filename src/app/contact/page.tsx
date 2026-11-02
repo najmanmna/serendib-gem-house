@@ -14,7 +14,7 @@ import { getWhatsAppLink } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Serendib Gem House in Colombo, Sri Lanka, on WhatsApp, by email or through our enquiry form.",
+    "Contact Serendib Crown Gems in Colombo, Sri Lanka, on WhatsApp, by email or through our enquiry form.",
   alternates: { canonical: routes.contact },
 };
 

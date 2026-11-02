@@ -54,7 +54,7 @@ export function Footer() {
     <footer data-surface="dark" className="border-t border-white/10 bg-navy text-white">
       <Container className="grid grid-cols-2 gap-x-8 gap-y-12 py-16 lg:grid-cols-12 lg:py-20">
         <div className="col-span-2 lg:col-span-4">
-          <Link href="/" aria-label="Serendib Gem House, home" className="inline-block rounded-brand">
+          <Link href="/" aria-label="Serendib Crown Gems, home" className="inline-block rounded-brand">
             <Logo tone="light" layout="stacked" />
           </Link>
           <p className="mt-6 max-w-xs text-[0.9375rem] leading-relaxed text-white/70">

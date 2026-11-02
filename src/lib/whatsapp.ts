@@ -1,7 +1,7 @@
 import { siteConfig } from "@/lib/site-config";
 
 export const GENERAL_ENQUIRY_MESSAGE =
-  "Hello, I would like to enquire about Serendib Gem House.\n\nCould you please provide more information?";
+  "Hello, I would like to enquire about Serendib Crown Gems.\n\nCould you please provide more information?";
 
 export type WhatsAppLink = {
   href: string;

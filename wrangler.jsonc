@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Built by `opennextjs-cloudflare build` (see package.json scripts and the GitHub Actions workflow).
+  "name": "serendib-crown-gems",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      // Must match "name" above.
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "serendib-crown-gems"
+    }
+  ],
+  // next/image optimisation through Cloudflare Images.
+  "images": {
+    "binding": "IMAGES"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

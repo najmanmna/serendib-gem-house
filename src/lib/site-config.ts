@@ -19,7 +19,7 @@ const contact: ContactDetails = {
 };
 
 export const siteConfig = {
-  name: "Serendib Gem House",
+  name: "Serendib Crown Gems",
   description:
     "Carefully selected spinels, garnets, sapphires and other fine gemstones, with transparent information and personal assistance from Colombo, Sri Lanka.",
   // Differs between local development and the live domain, so it stays an environment variable.

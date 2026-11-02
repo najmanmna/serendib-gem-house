@@ -1,4 +1,4 @@
-# Serendib Gem House — Product Detail Page Specification
+# Serendib Crown Gems — Product Detail Page Specification
 
 **Document:** `05-product-details.md`  
 **Status:** Initial specification  
@@ -499,11 +499,11 @@ Each published product page should have:
 
 ### Suggested title format
 
-`Blue Sapphire | Serendib Gem House`
+`Blue Sapphire | Serendib Crown Gems`
 
 ### Suggested description
 
-`Explore this Blue Sapphire gemstone at Serendib Gem House. View its specifications, listed price and availability, or contact us for an enquiry.`
+`Explore this Blue Sapphire gemstone at Serendib Crown Gems. View its specifications, listed price and availability, or contact us for an enquiry.`
 
 Descriptions should be generated from actual product data and not contain invented characteristics.
 

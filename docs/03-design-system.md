@@ -1,15 +1,15 @@
-# Serendib Gem House — Design System
+# Serendib Crown Gems — Design System
 
 **Document:** `03-design-system.md`  
 **Status:** Initial design system approved  
-**Brand:** Serendib Gem House  
+**Brand:** Serendib Crown Gems  
 **Version:** 1.0
 
 ---
 
 ## 1. Design Philosophy
 
-The Serendib Gem House website should communicate elegance, trust, quality and professionalism through a refined editorial design.
+The Serendib Crown Gems website should communicate elegance, trust, quality and professionalism through a refined editorial design.
 
 The visual experience should feel like a premium gemstone gallery rather than a conventional online shopping template.
 
@@ -683,7 +683,7 @@ These are initial design tokens. They may be adjusted during implementation to m
 
 ## 19. Final Design Direction
 
-The finished Serendib Gem House website should feel like a carefully curated online gemstone gallery.
+The finished Serendib Crown Gems website should feel like a carefully curated online gemstone gallery.
 
 The gemstone photography should remain the centre of attention. Typography, whitespace, colours and interactions should support the products rather than compete with them.
 

@@ -11,7 +11,7 @@ import { routes } from "@/lib/routes";
 export const metadata: Metadata = {
   title: "How to Buy",
   description:
-    "How buying a gemstone from Serendib Gem House works: browse the collection, send an enquiry, then arrange payment and delivery or handover with us personally.",
+    "How buying a gemstone from Serendib Crown Gems works: browse the collection, send an enquiry, then arrange payment and delivery or handover with us personally.",
   alternates: { canonical: routes.howToBuy },
 };
 

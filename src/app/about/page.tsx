@@ -13,7 +13,7 @@ import { routes } from "@/lib/routes";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Serendib Gem House is a Colombo-based gemstone business making fine gemstones accessible and affordable for everyone, with clear prices and personal assistance.",
+    "Serendib Crown Gems is a Colombo-based gemstone business making fine gemstones accessible and affordable for everyone, with clear prices and personal assistance.",
   alternates: { canonical: routes.about },
 };
 
@@ -52,7 +52,7 @@ export default function AboutPage() {
               id="about-heading"
               className="mt-5 animate-fade-up font-heading text-[2.9rem] leading-[0.98] font-semibold tracking-[-0.02em] text-balance [animation-delay:60ms] sm:text-6xl lg:text-[5rem]"
             >
-              About Serendib Gem House
+              About Serendib Crown Gems
             </h1>
             <p className="mt-7 max-w-lg animate-fade-up text-lg leading-relaxed text-muted [animation-delay:120ms]">
               A Colombo-based gemstone business offering carefully selected gemstones, with clear

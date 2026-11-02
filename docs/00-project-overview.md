@@ -1,7 +1,7 @@
-# Serendib Gem House — Project Overview
+# Serendib Crown Gems — Project Overview
 
 **Document:** 00-project-overview.md  
-**Project:** Serendib Gem House Website  
+**Project:** Serendib Crown Gems Website  
 **Document Status:** Approved — Business Requirements  
 **Version:** 1.0
 
@@ -9,13 +9,13 @@
 
 ## 1. Project Introduction
 
-Serendib Gem House is an online gemstone business based in Sri Lanka.
+Serendib Crown Gems is an online gemstone business based in Sri Lanka.
 
 The business offers a selection of loose gemstones, including spinels, garnets, sapphires and other varieties, across different price ranges.
 
 The objective is to establish a professional online presence through a premium, trustworthy and easy-to-use gemstone catalogue.
 
-The website will allow customers to explore available gemstones, view detailed product information and prices, and contact Serendib Gem House to make purchase enquiries.
+The website will allow customers to explore available gemstones, view detailed product information and prices, and contact Serendib Crown Gems to make purchase enquiries.
 
 The website will initially target customers in Sri Lanka.
 
@@ -44,7 +44,7 @@ All purchases will be handled manually through customer enquiries.
 
 | Attribute | Details |
 |---|---|
-| Business name | Serendib Gem House |
+| Business name | Serendib Crown Gems |
 | Business model | Online gemstone business |
 | Primary market | Sri Lanka |
 | Primary currency | Sri Lankan Rupees (LKR) |
@@ -332,7 +332,7 @@ Filtering must work correctly even when some optional product attributes are not
 
 ## 15. Brand Positioning and Content
 
-Serendib Gem House should communicate:
+Serendib Crown Gems should communicate:
 
 - Trustworthiness.
 - Carefully selected gemstones.
@@ -435,5 +435,5 @@ The initial website will be considered successful when:
 
 **End of Document**
 
-**Document ownership:** Serendib Gem House  
+**Document ownership:** Serendib Crown Gems  
 **Project status:** Requirements approved — Ready for brand identity and website planning.

@@ -1,4 +1,4 @@
-# Serendib Gem House — Website Structure
+# Serendib Crown Gems — Website Structure
 
 **Document:** 02-website-structure.md  
 **Version:** 1.0  
@@ -8,7 +8,7 @@
 
 ## 1. Website Overview
 
-The Serendib Gem House website will be a catalogue-first website designed to showcase gemstones, provide product information and generate customer enquiries.
+The Serendib Crown Gems website will be a catalogue-first website designed to showcase gemstones, provide product information and generate customer enquiries.
 
 The website should have a premium, minimal and editorial design.
 
@@ -93,7 +93,7 @@ Desktop should display the text and photograph side by side.
 
 Mobile should use a vertically stacked layout.
 
-The hero should immediately communicate that Serendib Gem House is a gemstone business.
+The hero should immediately communicate that Serendib Crown Gems is a gemstone business.
 
 ### Section 2: Featured Gemstones
 
@@ -146,7 +146,7 @@ Use actual gemstone photography wherever available.
 
 Cards should have consistent image proportions and a refined hover interaction.
 
-### Section 4: Brand Mission and Why Serendib Gem House
+### Section 4: Brand Mission and Why Serendib Crown Gems
 
 **Layout:** Editorial text with three assurances, beside a photograph composition.
 
@@ -182,7 +182,7 @@ Include:
 - Aqua WhatsApp CTA button.
 - Clear and concise supporting text.
 
-The WhatsApp button should open a conversation with Serendib Gem House.
+The WhatsApp button should open a conversation with Serendib Crown Gems.
 
 ### Section 6: How to Buy
 
@@ -196,7 +196,7 @@ Explore the available gemstone collection, with photographs, details and prices 
 
 **Enquire**
 
-Contact Serendib Gem House through WhatsApp or a website enquiry form. Availability is confirmed and questions are answered.
+Contact Serendib Crown Gems through WhatsApp or a website enquiry form. Availability is confirmed and questions are answered.
 
 **Purchase**
 
@@ -250,7 +250,7 @@ The footer should contain the following areas:
 
 Bottom bar:
 - Copyright information.
-- Serendib Gem House.
+- Serendib Crown Gems.
 - Current year.
 
 The footer must collapse into a clean responsive layout on mobile.
@@ -415,11 +415,11 @@ The WhatsApp enquiry message must include the product name and Product ID automa
 
 **Route:** `/about`
 
-The About Us page should introduce Serendib Gem House and communicate its business values.
+The About Us page should introduce Serendib Crown Gems and communicate its business values.
 
 Suggested content:
 
-- Introduction to Serendib Gem House.
+- Introduction to Serendib Crown Gems.
 - Business background.
 - Approach to selecting and presenting gemstones.
 - Commitment to transparent product information.

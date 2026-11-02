@@ -67,7 +67,7 @@ export function MobileNavigation({ whatsapp, location }: { whatsapp: WhatsAppLin
       >
         <div className="flex h-full flex-col">
           <div className="flex h-20 shrink-0 items-center justify-between border-b border-line px-5 sm:px-8">
-            <Link href="/" onClick={close} aria-label="Serendib Gem House, home" className="rounded-brand">
+            <Link href="/" onClick={close} aria-label="Serendib Crown Gems, home" className="rounded-brand">
               <Logo />
             </Link>
             <button

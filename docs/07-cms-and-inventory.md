@@ -1,4 +1,4 @@
-# Serendib Gem House — CMS and Inventory Management
+# Serendib Crown Gems — CMS and Inventory Management
 
 **Document:** `07-cms-and-inventory.md`  
 **Status:** Revised specification  
@@ -8,7 +8,7 @@
 
 ## 1. Overview
 
-Serendib Gem House will use **Sanity as its central Content Management System (CMS)**.
+Serendib Crown Gems will use **Sanity as its central Content Management System (CMS)**.
 
 Sanity will manage:
 

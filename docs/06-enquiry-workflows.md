@@ -1,4 +1,4 @@
-# Serendib Gem House — Enquiry and Communication Workflows
+# Serendib Crown Gems — Enquiry and Communication Workflows
 
 **Document:** `06-enquiry-workflows.md`  
 **Status:** Initial specification  
@@ -8,7 +8,7 @@
 
 ## 1. Overview
 
-Serendib Gem House operates an enquiry-led sales model.
+Serendib Crown Gems operates an enquiry-led sales model.
 
 Customers discover gemstones through the website and contact the business to discuss purchasing, inspection, certification or general questions.
 
@@ -75,7 +75,7 @@ Use the official WhatsApp click-to-chat URL format.
 
 Suggested pre-filled message:
 
-Hello, I would like to enquire about Serendib Gem House.
+Hello, I would like to enquire about Serendib Crown Gems.
 
 Could you please provide more information?
 
@@ -219,13 +219,13 @@ Send an acknowledgement to the customer's submitted email address.
 
 Suggested subject:
 
-`We received your enquiry | Serendib Gem House`
+`We received your enquiry | Serendib Crown Gems`
 
 Suggested content:
 
 Hello [Customer Name],
 
-Thank you for contacting Serendib Gem House.
+Thank you for contacting Serendib Crown Gems.
 
 We have received your enquiry and our team will review it and get back to you.
 
@@ -233,10 +233,10 @@ Your enquiry reference is: [Reference Number]
 
 If your enquiry concerns a particular gemstone, please keep this reference for future communication.
 
-Thank you for your interest in Serendib Gem House.
+Thank you for your interest in Serendib Crown Gems.
 
 Kind regards,  
-Serendib Gem House
+Serendib Crown Gems
 
 ### Important
 
@@ -480,7 +480,7 @@ Configure:
 
 Recommended sender format:
 
-`Serendib Gem House <hello@yourdomain.lk>`
+`Serendib Crown Gems <hello@yourdomain.lk>`
 
 The actual email address should be configured once the business domain email is established.
 

@@ -9,7 +9,7 @@ import { HowToBuy } from "@/components/home/HowToBuy";
 import garnetStill from "@/assets/hero/garnet-still.jpg";
 import { siteConfig } from "@/lib/site-config";
 
-const title = "Serendib Gem House | Fine Gemstones in Colombo, Sri Lanka";
+const title = "Serendib Crown Gems | Fine Gemstones in Colombo, Sri Lanka";
 const description =
   "Discover carefully selected spinels, garnets, sapphires and other fine gemstones, with clear prices in LKR, transparent information and personal assistance from Colombo, Sri Lanka.";
 

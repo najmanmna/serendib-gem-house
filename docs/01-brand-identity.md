@@ -1,4 +1,4 @@
-# Serendib Gem House — Brand Identity
+# Serendib Crown Gems — Brand Identity
 
 **Document:** 01-brand-identity.md  
 **Version:** 1.0  
@@ -8,9 +8,9 @@
 
 ## 1. Brand Overview
 
-**Brand Name:** Serendib Gem House
+**Brand Name:** Serendib Crown Gems
 
-Serendib Gem House is a premium yet accessible gemstone business based in Sri Lanka.
+Serendib Crown Gems is a premium yet accessible gemstone business based in Sri Lanka.
 
 The brand should communicate trust, elegance, quality and professionalism without appearing excessively luxurious, decorative or intimidating.
 
@@ -45,7 +45,7 @@ The approved logo direction consists of:
 - A simple crown symbol.
 - A faceted gemstone beneath the crown.
 - The word SERENDIB in prominent serif typography.
-- The words GEM HOUSE below the brand name in smaller, refined sans-serif typography.
+- The words CROWN GEMS below the brand name in smaller, refined sans-serif typography.
 
 ### 2.2 Logo Colours
 
@@ -53,7 +53,7 @@ The approved logo direction consists of:
 - Gemstone: Aqua / Cyan.
 - Facet separators: White.
 - SERENDIB: Deep Navy.
-- GEM HOUSE: Deep Navy.
+- CROWN GEMS: Deep Navy.
 
 ### 2.3 Logo Design Principles
 
@@ -314,7 +314,7 @@ The website should establish the primary digital expression of the brand.
 
 ## 9. Brand Consistency Rules
 
-1. Always use the official brand name: Serendib Gem House.
+1. Always use the official brand name: Serendib Crown Gems.
 2. Maintain the approved navy and aqua colour palette.
 3. Use serif and sans-serif typography consistently.
 4. Prioritise gemstone photography over decorative graphics.

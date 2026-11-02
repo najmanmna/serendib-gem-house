@@ -1,4 +1,4 @@
-# Serendib Gem House — Product Catalogue Specification
+# Serendib Crown Gems — Product Catalogue Specification
 
 **Document:** `04-product-catalogue.md`  
 **Status:** Initial specification  
@@ -8,7 +8,7 @@
 
 ## 1. Catalogue Overview
 
-The Serendib Gem House catalogue is a public-facing gemstone inventory designed to let customers discover gemstones, compare available products and submit enquiries.
+The Serendib Crown Gems catalogue is a public-facing gemstone inventory designed to let customers discover gemstones, compare available products and submit enquiries.
 
 The catalogue is enquiry-led rather than a conventional e-commerce store.
 

@@ -7,9 +7,9 @@ import logoNavbar from "@/assets/brand/logo-navbar.png";
 
 /**
  * Brand logo, from the supplied artwork:
- * - `horizontal`: the navbar lockup (src/assets/brand/serendib-logo-navbar-original.png),
+ * - `horizontal`: the navbar lockup (src/assets/brand/serendib-crown-gems-navbar-original.png),
  *   used in the header and mobile menu.
- * - `stacked`: the full lockup (src/assets/brand/serendib-logo-original.png).
+ * - `stacked`: the full lockup (src/assets/brand/serendib-crown-gems-original.png).
  *
  * Images use empty alt text: every usage sits inside a link labelled with the brand name.
  */
