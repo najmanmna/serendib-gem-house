@@ -9,11 +9,8 @@ import { mainNavigation, routes } from "@/lib/routes";
 import { siteConfig } from "@/lib/site-config";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 
-/** Captured once in the cached static shell rather than on every request. */
-async function CurrentYear() {
-  "use cache";
-  return <>{new Date().getFullYear()}</>;
-}
+/** Set at build time (see next.config.ts), so it updates with every deploy without a runtime cache. */
+const copyrightYear = process.env.NEXT_PUBLIC_BUILD_YEAR;
 
 function ColumnHeading({ children }: { children: ReactNode }) {
   return (
@@ -136,7 +133,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <Container className="flex flex-col gap-2 py-6 text-sm text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © <CurrentYear /> {siteConfig.name}. All rights reserved.
+            © {copyrightYear} {siteConfig.name}. All rights reserved.
           </p>
           <p>{siteConfig.location}</p>
         </Container>
