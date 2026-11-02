@@ -43,7 +43,7 @@ function NotYetConfigured() {
 }
 
 export function Footer() {
-  const { email, instagramUrl, whatsappNumber } = siteConfig.contact;
+  const { email, instagramUrl, whatsappDisplay } = siteConfig.contact;
   const whatsapp = getWhatsAppLink();
   const iconClass = "size-[1.125rem]";
 
@@ -96,7 +96,7 @@ export function Footer() {
             <ContactItem icon={<ChatIcon className={iconClass} />} label="WhatsApp">
               {whatsapp.isWhatsApp ? (
                 <a href={whatsapp.href} target="_blank" rel="noopener noreferrer" className={footerLink}>
-                  +{whatsappNumber}
+                  {whatsappDisplay}
                   <span className="sr-only"> (opens WhatsApp)</span>
                 </a>
               ) : (

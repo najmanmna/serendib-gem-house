@@ -46,7 +46,7 @@ async function PrefilledForm({ searchParams }: { searchParams: PageProps<"/conta
 }
 
 export default function ContactPage(props: PageProps<"/contact">) {
-  const { whatsappNumber, email, instagramUrl } = siteConfig.contact;
+  const { whatsappDisplay, email, instagramUrl } = siteConfig.contact;
   const whatsapp = getWhatsAppLink();
   const iconClass = "size-5";
 
@@ -74,7 +74,7 @@ export default function ContactPage(props: PageProps<"/contact">) {
             <ContactMethod icon={<ChatIcon className={iconClass} />} label="WhatsApp">
               {whatsapp.isWhatsApp ? (
                 <a href={whatsapp.href} target="_blank" rel="noopener noreferrer" className={linkClass}>
-                  +{whatsappNumber}
+                  {whatsappDisplay}
                 </a>
               ) : (
                 comingSoon

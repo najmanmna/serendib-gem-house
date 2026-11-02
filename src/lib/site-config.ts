@@ -13,10 +13,17 @@ type ContactDetails = {
 };
 
 const contact: ContactDetails = {
-  whatsappNumber: "+947077411188",
+  whatsappNumber: "+94707741118",
   email: null,
   instagramUrl: "https://www.instagram.com/serendib_gem_house/",
 };
+
+/** "+94707741118" → "+94 70 774 1118"; other formats are shown as given. */
+function formatSriLankanNumber(number: string | null) {
+  const digits = number?.replace(/\D/g, "") ?? "";
+  const match = digits.match(/^94(\d{2})(\d{3})(\d{4})$/);
+  return match ? `+94 ${match[1]} ${match[2]} ${match[3]}` : number;
+}
 
 export const siteConfig = {
   name: "Serendib Crown Gems",
@@ -28,5 +35,7 @@ export const siteConfig = {
   contact: {
     ...contact,
     whatsappNumber: contact.whatsappNumber?.replace(/\D/g, "") || null,
+    /** For display, e.g. "+94 70 774 1118". */
+    whatsappDisplay: formatSriLankanNumber(contact.whatsappNumber),
   },
 } as const;
