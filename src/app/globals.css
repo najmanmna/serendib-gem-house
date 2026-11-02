@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* Design tokens — docs/03-design-system.md §18 */
+@theme {
+  --color-navy: #071d3b;
+  --color-navy-hover: #0f2c55;
+  --color-aqua: #12b9dc;
+  --color-aqua-hover: #3cc7e5;
+  --color-pale-blue: #eaf5fa;
+  --color-line: #e5e7eb;
+  --color-muted: #64748b;
+
+  --radius-brand: 5px;
+  --container-site: 85rem; /* 1360px */
+
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --animate-fade-up: fade-up 750ms var(--ease-soft) both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* Font families are injected by next/font as CSS variables on <html>. */
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+}
+
+@layer base {
+  html {
+    color: var(--color-navy);
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 6rem;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-aqua) 28%, white);
+    color: var(--color-navy);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-navy);
+    outline-offset: 3px;
+  }
+
+  /* Dark sections (contact CTA, footer) use the aqua accent for focus rings. */
+  [data-surface="dark"] :focus-visible {
+    outline-color: var(--color-aqua);
+  }
+
+  /* Lock page scroll while the mobile navigation dialog is open. */
+  html:has(dialog[open]) {
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /*
+   * Subtle scroll reveal using CSS scroll-driven animations: no JavaScript, and
+   * content is always visible in browsers without support or with reduced motion.
+   */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 40%;
+      }
+    }
+  }
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /*
+   * Shop by Gemstone accordion (large screens): the hovered or focused panel widens
+   * and reveals its description. The first panel is open while nothing is active.
+   */
+  @media (min-width: 64rem) {
+    .category-accordion > li {
+      flex: 1 1 0;
+      transition: flex-grow 700ms var(--ease-soft);
+    }
+
+    .category-accordion > li:hover,
+    .category-accordion > li:focus-within,
+    .category-accordion:not(:hover):not(:focus-within) > li:first-child {
+      flex-grow: 2.4;
+    }
+
+    .category-accordion .category-reveal {
+      opacity: 0;
+      transform: translateY(0.5rem);
+      transition:
+        opacity 300ms ease,
+        transform 500ms var(--ease-soft);
+    }
+
+    .category-accordion > li:hover .category-reveal,
+    .category-accordion > li:focus-within .category-reveal,
+    .category-accordion:not(:hover):not(:focus-within) > li:first-child .category-reveal {
+      opacity: 1;
+      transform: none;
+      transition-delay: 200ms;
+    }
+  }
+
+  /* Hero gem: a gentle float, with its shadow tightening as it rises */
+  .gem-float {
+    animation: gem-float 7s ease-in-out infinite;
+  }
+
+  .gem-shadow {
+    animation: gem-shadow 7s ease-in-out infinite;
+  }
+
+  @keyframes gem-float {
+    50% {
+      transform: translateY(-2.5%);
+    }
+  }
+
+  @keyframes gem-shadow {
+    50% {
+      transform: scale(0.84);
+    }
+  }
+
+  /* Mobile navigation dialog */
+  .mobile-nav[open] {
+    animation: fade-up 300ms var(--ease-soft) both;
+  }
+
+  .mobile-nav::backdrop {
+    background-color: rgb(7 29 59 / 0.25);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
