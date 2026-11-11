@@ -33,7 +33,7 @@ export const contactImage: ImageAsset = {
   alt: "An oval-cut blue sapphire and its reflection on a grey surface",
 };
 
-export const categories: GemstoneCategory[] = [
+const allCategories: GemstoneCategory[] = [
   {
     name: "Spinel",
     slug: "spinel",
@@ -62,6 +62,11 @@ export const categories: GemstoneCategory[] = [
     },
   },
 ];
+
+/** Only categories that currently have a listing are shown; an empty one reappears once stock is added. */
+export const categories: GemstoneCategory[] = allCategories.filter((category) =>
+  products.some((product) => product.categorySlug === category.slug),
+);
 
 /** Featured gemstones for the homepage, drawn from the (sample) catalogue. */
 export const featuredProducts: { items: ProductSummary[] } = {

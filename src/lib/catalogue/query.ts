@@ -18,7 +18,7 @@ export function effectivePrice(product: ProductSummary) {
   return product.salePrice !== undefined && product.salePrice < product.price ? product.salePrice : product.price;
 }
 
-/** Case-insensitive; ignores spaces and hyphens so "sghdemo01" finds "SGH-DEMO-01". */
+/** Case-insensitive; ignores spaces and hyphens so "sgh0001" finds "SGH-0001". */
 const normalise = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, "");
 
 function inRange(value: number | undefined, min: number | null, max: number | null) {
