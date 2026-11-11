@@ -99,7 +99,8 @@ function viewingMessage(product: ProductDetail) {
 
 function specifications(product: ProductDetail): Array<[string, string]> {
   const rows: Array<[string, string | null | undefined]> = [
-    ["Gemstone", product.category],
+    // "Other Gemstones" is a catch-all, not a variety: show the gemstone type only when it is known.
+    ["Gemstone", product.variety ?? (product.categorySlug === "other-gemstones" ? null : product.category)],
     ["Weight", product.weightCarats ? `${product.weightCarats.toFixed(2)} ct` : null],
     ["Colour", product.colour ? colourLabel(product.colour) : null],
     ["Shape / Cut", product.shape && product.shape !== "other" ? shapeLabel(product.shape, "card") : null],

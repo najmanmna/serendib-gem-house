@@ -23,7 +23,7 @@ export function ProductCard({
   product,
   sizes = "(min-width: 1360px) 290px, (min-width: 1024px) 21vw, (min-width: 640px) 42vw, 46vw",
 }: ProductCardProps) {
-  const { name, category, availability, image, price, salePrice } = product;
+  const { name, category, variety, availability, image, price, salePrice } = product;
   const sold = availability === "sold";
   const onSale = !sold && salePrice !== undefined && salePrice < price;
   const specifications = formatSpecifications([
@@ -72,7 +72,7 @@ export function ProductCard({
 
         {/* Details */}
         <div className="mt-5 flex flex-1 flex-col">
-          <p className="text-[0.625rem] font-medium tracking-[0.16em] text-muted uppercase">{category}</p>
+          <p className="text-[0.625rem] font-medium tracking-[0.16em] text-muted uppercase">{variety ?? category}</p>
 
           <h3 className="mt-2.5 mb-4 line-clamp-2 font-heading text-[1.25rem] leading-[1.15] font-semibold text-navy sm:text-[1.45rem]">
             {name}

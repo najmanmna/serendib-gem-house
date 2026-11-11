@@ -30,6 +30,8 @@ export type ProductSummary = {
   /** Display name of the category, e.g. "Other Gemstones". */
   category: string;
   categorySlug: string;
+  /** The gemstone variety when it is known and confirmed, e.g. "Zircon". Never guessed. */
+  variety?: string;
   price: number;
   salePrice?: number;
   availability: Availability;

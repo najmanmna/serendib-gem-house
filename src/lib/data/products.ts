@@ -1,11 +1,21 @@
 /**
- * SAMPLE CATALOGUE: not real inventory.
- *
  * Static product data for building the catalogue before the Sanity integration.
- * Product IDs use the `SGH-DEMO-` prefix so they can never be mistaken for real
- * listings. Replace with Sanity queries before launch. Images are temporary
- * placeholder photographs (see src/assets/placeholder/ATTRIBUTION.md).
+ *
+ * `SGH-DEMO-` products are SAMPLES, not inventory, with temporary placeholder
+ * photographs (see src/assets/placeholder/ATTRIBUTION.md). Products with plain IDs
+ * (`SGH-0001`, ...) are real stones with their own photographs in src/assets/products.
+ * Replace all of this with Sanity queries before launch.
  */
+import blueGemstone1 from "@/assets/products/blue-pear-1.jpg";
+import blueGemstone2 from "@/assets/products/blue-pear-2.jpg";
+import blueGemstone3 from "@/assets/products/blue-pear-3.jpg";
+import greenZircon1 from "@/assets/products/green-zircon-1.jpg";
+import greenZircon2 from "@/assets/products/green-zircon-2.jpg";
+import greenZircon3 from "@/assets/products/green-zircon-3.jpg";
+import greenZircon4 from "@/assets/products/green-zircon-4.jpg";
+import pinkGemstone1 from "@/assets/products/pink-cushion-1.jpg";
+import pinkGemstone2 from "@/assets/products/pink-cushion-2.jpg";
+import pinkGemstone3 from "@/assets/products/pink-cushion-3.jpg";
 import categoryGarnet from "@/assets/placeholder/category-garnet.jpg";
 import categorySapphire from "@/assets/placeholder/category-sapphire.jpg";
 import categorySpinel from "@/assets/placeholder/category-spinel.jpg";
@@ -32,6 +42,46 @@ const category = {
 } as const;
 
 export const products: ProductSummary[] = [
+  // Real stones (own photographs). Only what the photographs show is recorded: colour and shape.
+  // PREVIEW VALUES, to confirm before publishing: variety/category, price, weight, origin, treatment.
+  // (SGH-0003 is confirmed as zircon by the owner; its price is still a placeholder.)
+  {
+    productId: "SGH-0001",
+    name: "Deep Blue Pear Cut",
+    slug: "deep-blue-pear-cut-sgh-0001",
+    ...category.other,
+    price: 95000, // PLACEHOLDER
+    availability: "available",
+    shape: "pear",
+    colour: "blue",
+    image: { src: blueGemstone1, alt: "A deep blue pear-shaped faceted gemstone with its point upwards" },
+    publishedAt: "2026-11-11",
+  },
+  {
+    productId: "SGH-0002",
+    name: "Pink Cushion Cut",
+    slug: "pink-cushion-cut-sgh-0002",
+    ...category.other,
+    price: 120000, // PLACEHOLDER
+    availability: "available",
+    shape: "cushion",
+    colour: "pink",
+    image: { src: pinkGemstone1, alt: "A pink cushion-shaped faceted gemstone, seen from above" },
+    publishedAt: "2026-11-10",
+  },
+  {
+    productId: "SGH-0003",
+    name: "Green Oval Zircon",
+    slug: "green-oval-zircon-sgh-0003",
+    ...category.other,
+    variety: "Zircon",
+    price: 45000, // PLACEHOLDER
+    availability: "available",
+    shape: "oval",
+    colour: "green",
+    image: { src: greenZircon1, alt: "A green oval faceted zircon on a white background" },
+    publishedAt: "2026-11-09",
+  },
   {
     productId: "SGH-DEMO-01",
     name: "Pink Spinel Crystal",
@@ -253,12 +303,37 @@ export const products: ProductSummary[] = [
 ];
 
 /** Product IDs selected for the homepage, in display order (a Sanity reference list later). */
-export const featuredProductIds = ["SGH-DEMO-01", "SGH-DEMO-02", "SGH-DEMO-03", "SGH-DEMO-04"];
+export const featuredProductIds = ["SGH-0001", "SGH-0002", "SGH-0003", "SGH-DEMO-01"];
 
 type Details = Omit<ProductDetail, keyof ProductSummary | "images"> & { extraImages?: ImageAsset[] };
 
 /** Detail-page information per Product ID (fields of the Sanity product document later). */
 const details: Record<string, Details> = {
+  "SGH-0001": {
+    description: "A pear-shaped faceted gemstone in a deep blue.",
+    certification: { status: "on-request" },
+    extraImages: [
+      { src: blueGemstone2, alt: "The deep blue pear-shaped gemstone, seen from slightly further away" },
+      { src: blueGemstone3, alt: "The deep blue pear-shaped gemstone, seen from the side" },
+    ],
+  },
+  "SGH-0003": {
+    description: "An oval faceted zircon in green.",
+    certification: { status: "on-request" },
+    extraImages: [
+      { src: greenZircon2, alt: "The green zircon seen from above, showing its facets" },
+      { src: greenZircon3, alt: "The green zircon tilted to show its crown and facets" },
+      { src: greenZircon4, alt: "The green zircon seen from the side" },
+    ],
+  },
+  "SGH-0002": {
+    description: "A cushion-shaped faceted gemstone in a rich pink.",
+    certification: { status: "on-request" },
+    extraImages: [
+      { src: pinkGemstone2, alt: "The pink cushion-shaped gemstone, seen from slightly further away" },
+      { src: pinkGemstone3, alt: "The pink cushion-shaped gemstone, seen from the side" },
+    ],
+  },
   "SGH-DEMO-01": {
     description:
       "A pink spinel crystal with natural crystal faces, showing a lively pink colour throughout. Offered as a rough specimen rather than a cut stone.",

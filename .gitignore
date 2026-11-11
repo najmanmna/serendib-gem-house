@@ -45,3 +45,12 @@ next-env.d.ts
 /.open-next
 /.wrangler
 .dev.vars*
+
+# Raw camera originals (large): keep locally, never commit
+*.DNG
+*.dng
+*.HEIC
+*.heic
+# Unprocessed AI edits of product photos (the cropped .jpg versions are what the site uses)
+src/assets/products/*.PNG
+src/assets/products/*.png
